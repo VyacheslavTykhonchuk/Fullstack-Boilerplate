@@ -1,0 +1,38 @@
+{
+  "name": "fullstack-boilerplate-backend",
+  "homepage": "https://github.com/VyacheslavTykhonchuk/Fullstack-Boilerplate.git",
+  "description": "A simple Koa 2 boilerplate for API's using ES6.",
+  "keywords": [
+    "koa",
+    "koa2",
+    "boilerplate",
+    "koalerplate",
+    "api",
+    "es6"
+  ],
+  "repository": "git@github.com:dbalas/koalerplate.git",
+  "author": "Daniel Balastegui",
+  "license": "MIT",
+  "version": "1.2.2",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "cross-env NODE_ENVIRONMENT=production node index"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.1.0",
+    "koa": "^2.6.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^4.0.0",
+    "koa-logger": "^3.2.0",
+    "koa-respond": "^1.0.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.3.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}

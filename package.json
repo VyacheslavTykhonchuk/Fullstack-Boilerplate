@@ -1,0 +1,33 @@
+{
+  "name": "fullstack-boilerplate",
+  "version": "1.0.0",
+  "description": "Production ready Node-React-Redux-Saga boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "proxy": "http://localhost:4000/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VyacheslavTykhonchuk/Fullstack-Boilerplate"
+  },
+  "keywords": [
+    "fullstack",
+    "node",
+    "react",
+    "redux",
+    "saga"
+  ],
+  "author": "Viacheslav Tykhonchuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VyacheslavTykhonchuk/Fullstack-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/VyacheslavTykhonchuk/Fullstack-Boilerplate#readme",
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
