@@ -1,11 +1,27 @@
 import { put, fork, takeLatest } from 'redux-saga/effects';
-import { get } from 'axios';
+import { get, post } from 'axios';
 import {
   constants as exampleConstants,
   actions as exampleActions,
 } from '../modules/example';
 
 export function* fetchExampleData() {
+  // const reqBody = {
+  //   query: `{
+  //     users {
+  //       name,
+  //       email
+  //     }
+  //   }`,
+  // };
+  // const result = yield post('/graphql', reqBody)
+  //   .then((res) => {
+  //     const { users } = res.data.data;
+  //     return users;
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
   const result = yield get('v1/todos')
     .then((res) => {
       console.log(res);
@@ -14,7 +30,6 @@ export function* fetchExampleData() {
     .catch((err) => {
       console.log(err);
     });
-  console.log(result);
   yield put(exampleActions.updateExample(result));
 }
 
